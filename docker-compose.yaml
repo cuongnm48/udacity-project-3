@@ -19,7 +19,7 @@ services:
       AWS_PROFILE: "default"
       AWS_BUCKET: "cuongnm48-bucket"
       JWT_SECRET: "helloworld"
-      URL: "http://localhost:8100"
+      URL: "http://aba8e684780b748c08b3a6598091f808-330901272.us-east-1.elb.amazonaws.com:8100"
   backend-feed:
     image: udagram-api-feed:c7n
     volumes:
@@ -33,8 +33,8 @@ services:
       AWS_PROFILE: "default"
       AWS_BUCKET: "cuongnm48-bucket"
       JWT_SECRET: "helloworld"
-      URL: "http://localhost:8100"
+      URL: "http://aba8e684780b748c08b3a6598091f808-330901272.us-east-1.elb.amazonaws.com:8100"
   frontend:
-    image: udagram-frontend:local
+    image: udagram-frontend:v6
     ports:
       - "8100:80"
